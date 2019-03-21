@@ -5,10 +5,15 @@ body.addEventListener("click", (e) => {
     let forkLink = clickedLink.getAttribute("forkLink");
     let downloadLink = clickedLink.getAttribute("downloadLink");
     
-    document.querySelector(".modal a.fork-link").setAttribute("href", forkLink);
-    document.querySelector(".modal a.download-link").setAttribute("href", downloadLink);
+    if(forkLink && downloadLink) {
+        document.querySelector(".modal a.fork-link").setAttribute("href", forkLink);
+        document.querySelector(".modal a.download-link").setAttribute("href", downloadLink);
+        body.classList.toggle("show-modal");
+    }
 
-    body.classList.toggle("show-modal");
+    if(e.target.classList.contains("modal-overlay")){
+        body.classList.toggle("show-modal");
+    }
 });
 
 document.querySelector(".modal").addEventListener("click", (e) => {
