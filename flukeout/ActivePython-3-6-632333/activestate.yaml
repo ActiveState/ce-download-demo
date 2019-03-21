@@ -1,0 +1,10 @@
+name: ActivePython-3-6-632333
+owner: flukeout
+languages:
+- name: python
+  version: ""
+  constraints:
+    platform: ""
+    environment: ""
+  build: {}
+  packages: []
