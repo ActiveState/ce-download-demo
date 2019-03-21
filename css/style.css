@@ -1,0 +1,122 @@
+body {
+  background: url(../active-python-page.png);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: 1800px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #efefef;
+}
+
+.show-modal .modal-overlay {
+    display: flex;
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(.85);
+    }
+    60% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.8);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal {
+    margin: 0 auto;
+    width: 700px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 12px rgba(0,0,0,.5);
+    background: url(../popup-content.png);
+    background-size: 700px;
+    width: 700px;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: modalPop .3s ease-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.button {
+    height: 60px;
+    width: 300px;
+    display: block;
+    position: absolute;
+    left: calc(50% - 150px);
+    bottom: 80px;
+    background: white;
+    opacity: .2;
+}
+
+.button:hover {
+    opacity: 0;
+}
+
+.download-link {
+    height: 30px;
+    width: 300px;
+    display: block;
+    position: absolute;
+    left: calc(50% - 150px);
+    bottom: 25px;
+}
+
+
+.links {
+    position: absolute;
+    width: 730px;
+    left: calc(50% - 300px);
+    height: 160px;
+    top: 400px;
+}
+
+.links .link {
+    position: absolute;
+    width: 33.3%;
+    height: 33.3%;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.links .link:hover {
+    opacity: 1;
+}
+
+.links .link[row="1"] {
+    top: 0%;
+}
+.links .link[row="2"] {
+    top: 33.3%;
+}
+.links .link[row="3"] {
+    top: 66.6%;
+}
+
+.links .link[col="1"] {
+    left: 0%;
+}
+.links .link[col="2"] {
+    left: 33.3%;
+}
+.links .link[col="3"] {
+    left: 66.6%;
+}
