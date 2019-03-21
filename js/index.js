@@ -1,5 +1,11 @@
 let body = document.querySelector("body");
 
+window.addEventListener("keydown", e => {
+    if(e.keyCode == 27) {
+        body.classList.remove("show-modal");
+    }
+})
+
 body.addEventListener("click", (e) => {
     let clickedLink = e.target;
     let forkLink = clickedLink.getAttribute("forkLink");
